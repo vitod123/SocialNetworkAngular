@@ -1,0 +1,34 @@
+<div class="side-menu">
+  <div [routerLink]="['/']">
+    <i class="bi bi-house-door-fill"></i>
+    Home
+  </div>
+  <div *ngIf="accountService.isAuthorized()" [routerLink]="['/profile', currentUser.userName]">
+    <i class="bi bi-person-fill"></i>
+    Profile
+  </div>
+  <div *ngIf="accountService.isAuthorized()" [routerLink]="['/users']">
+    <i class="bi bi-chat-fill"></i>
+    Chats
+  </div>
+  <div *ngIf="accountService.isAuthorized()" [routerLink]="['/groups']">
+    <i class="bi bi-chat-fill"></i>
+    Group Chats
+  </div>
+  <div *ngIf="accountService.isAuthorized()">
+    <i class="bi bi-bell-fill"></i>
+    Notifications
+  </div>
+  <div *ngIf="!accountService.isAuthorized()" [routerLink]="['/login']">
+    <i class="bi bi-bell-fill"></i>
+    Login
+  </div>
+  <div *ngIf="!accountService.isAuthorized()" [routerLink]="['/register']">
+    <i class="bi bi-bell-fill"></i>
+    Sing Up
+  </div>
+  <div *ngIf="accountService.isAuthorized()" (click)="logout()" [routerLink]="['/']">
+    <i class="bi bi-person-fill-x"></i>
+    Logout
+  </div>
+</div>

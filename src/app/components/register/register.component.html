@@ -1,0 +1,20 @@
+<div class="container">
+  <form (ngSubmit)="register()" [formGroup]="registerForm">
+    <input type="checkbox" id="check">
+    <div class="registration form">
+      <header>Signup</header>
+      <div action="#">
+        <input formControlName="displayUsername" type="text" required placeholder="Enter Username">
+        <input formControlName="email" type="text" required placeholder="Enter your email">
+        <input formControlName="phoneNumber" type="text" required placeholder="Enter your phone number">
+        <input formControlName="password" required type="password" placeholder="Create a password">
+        <input type="submit" class="button" value="Signup">
+      </div>
+      <div class="signup">
+        <span class="signup">Already have an account?
+        <label for="check" [routerLink]="['/login']">Login</label>
+        </span>
+      </div>
+    </div>
+  </form>
+</div>

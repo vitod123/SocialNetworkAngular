@@ -1,0 +1,27 @@
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0px;
+    padding: 0 10px;
+    padding-top: 10px;
+    gap: 10px;
+    >div {
+        transition: .1s;
+        border-radius: 50px;
+        padding: 10px;
+        padding-right: 30px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        font-size: 25px;
+        >i {
+            font-size: 30px;
+        }
+    }    
+    >div:hover {
+        background-color: #e5e5e5;
+    }
+}
